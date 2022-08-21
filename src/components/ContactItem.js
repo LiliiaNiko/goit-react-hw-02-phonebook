@@ -1,5 +1,5 @@
 import React from 'react';
-import { List, ListItem } from './ContactItem.styled';
+import { List, ListItem, Button } from './ContactItem.styled';
 
 const ContactItem = ({ name, number, id, onRemove }) => {
   return (
@@ -7,9 +7,9 @@ const ContactItem = ({ name, number, id, onRemove }) => {
       <ListItem key={id}>
         {name}: {number}
       </ListItem>
-      <button type="button" onClick={() => onRemove(id)}>
+      <Button type="button" onClick={() => onRemove(id)}>
         Delete
-      </button>
+      </Button>
     </List>
   );
 };
