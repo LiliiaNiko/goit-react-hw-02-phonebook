@@ -11,14 +11,14 @@ export class App extends Component {
   };
 
   handleRemove = id => {
-    console.log('remove');
+    //console.log('remove');
     this.setState({
       contacts: this.state.contacts.filter(contact => contact.id !== id),
     });
   };
 
   formSubmitHandler = data => {
-    console.log('data', data);
+    //console.log('data', data);
     this.state.contacts.find(contact => contact.name === data.name)
       ? alert(`${data.name} is already in contacts`)
       : this.setState(prevState => ({
